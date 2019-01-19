@@ -1,0 +1,284 @@
+/*-------------
+Scrollbalken
+---------------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a7a6a6; 
+}
+
+.grad {
+    background-image: linear-gradient(#6b482d, #0b0705);
+}
+
+.bgspotiblack {
+  background-color: #000;
+  filter:alpha(opacity=50); /* IE */
+  opacity:0.5; /* allgemein */
+  -moz-opacity:0.5; /* Mozilla */
+  -khtml-opacity:0.5; /* KTHML */
+  -opera-opacity:0.5; /* Opera */
+}
+
+.menutopopen li {
+position: relative;
+top: 765px;
+left: 541px;
+z-index:3;
+}
+
+.nav li ul ul {
+	margin: -1em 0 0 10em;
+}
+.nav, .nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none; 
+	line-height: 1;
+}
+.nav li:hover ul ul, .nav li.sfhover ul ul {
+	left: -999em;
+}
+.nav li:hover ul, .av li li:hover ul, .nav li.sfhover ul, .nav li li.sfhover ul {
+	left: auto;
+}
+
+/* -----
+   select Menu mehrere Instanzen
+   -----
+*/
+
+.mdui-select-spoti  {
+  z-index:2;
+  font-weight:0.8em !important;
+  text-shadow:none !important;
+  text-align: left !important;
+  letter-spacing: 0px !important;
+}
+
+.mdui-select-spoti select  {
+  color : rgba(255,255,255,1);
+  height:100% !important;
+  font-size:0.8em !important;
+  background: rgba(0,0,0,0);
+  border: none;
+  outline: none;
+  border-bottom : 0px solid rgba(255,255,255,0.54);
+  width:100%;
+}
+
+.vis_container_edit .mdui-select-spoti select {
+  pointer-events: none;
+} 
+
+.mdui-select-spoti select option {
+  background: #212121 !important;
+  font-weight:normal !important;
+  font-size:1em !important;
+}
+
+.mdui-select-spoti:before {
+  position: absolute;
+  top: calc(50% - 0.22em);
+  right: 0.22em;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  content: "";
+  /*border-left: .4em solid transparent;
+  border-right: .4em solid transparent;
+  border-top: .4em solid #FFFFFF;*/
+  pointer-events: none;
+}
+
+.mdui-runtime.mdui-notouch .mdui-select-spoti select:hover,
+.mdui-select select:focus {
+  border-bottom-color : #2196F3;
+  box-shadow: 0 0 0 1000px rgba(255,255,255,1) inset;
+  transition: all 0.3s ease;
+}
+
+/* -----
+   Spotify 1.0.0 Adapter styles View
+   ----- */
+
+.spotifyPlaylistsRow .spotifyPlaylistsRowActive
+{
+  width:100% !important;    
+}
+
+.spotifyPlaylistsTable
+{
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+.spotifyPlaylistsCol
+{
+  display: inline-block;    
+  width:95% !important;
+}
+
+.spotifyPlaylistsColTitle
+{
+  display: inline-block;   
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:90% !important;  
+}
+
+.spotifyPlaylistsColTitleActive
+{
+  display: inline-block;   
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:90% !important;
+}
+
+.spotifyPlaylistsColIcon
+{
+  display: inline-block;      
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:20px !important;
+}
+
+.spotifyTracksTable
+{
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+.spotifyTracksColTitle
+{
+  display: inline-block;    
+  width:95% !important;
+}
+
+.spotifyTracksRow
+{
+    width: auto !important;
+}
+
+.spotifyTracksArtistAlbum
+{
+    display: block;
+    white-space: nowrap;
+    width: 80% !important;    
+}
+
+.spotifyTracksTitle
+{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100% !important;
+
+}
+
+.spotifyTracksArtist
+{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 70% !important;
+    font-size: small;
+}
+
+.spotifyTracksAlbum
+{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70% !important;
+    font-size: small;
+}
+
+.spotifyTracksColIcon
+{
+    width:16px !important;
+}
+
+.spotifyTracksColTitle
+{
+    width:80% !important;
+}
+
+.spotifyTracksColDuration
+{
+    width: 50px !important;
+}
+
+.ellipsis
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+  line-height: 30px;
+}
+
+.ellipsistracks
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 470px;
+  line-height: 20px;
+}
+
+.ellipsiartist
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 470px;
+  line-height: 20px;
+  font-size:small; 
+  padding-bottom: 20px;
+}
+
+.ellipsistracksplaybox
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 245px;
+}
+
+.ellipsistracksplayboxsmall
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 245px;
+}
+
+.ellipsistitle
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+}
